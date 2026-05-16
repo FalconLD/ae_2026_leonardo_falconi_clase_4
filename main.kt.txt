@@ -7,16 +7,37 @@ data class Student(
     val grade: Int,
     val isActive: Boolean
 )
-fun main() {
+fun getStudents(): List<Student>{
 	val jorge = Student(
     	id = 1,
-        name = "Jorge",
-        email = "jorge@puce.com",
-        grade = 8,
+        name = "Juan",
+        email = "juan@puce.com",
+        grade = 6,
         isActive = true
     )
-    val ana = Student (1, "Ana", "ana@puce.com", 10, true)
-    
-    println(jorge)
-    println(ana)
+    val ana = Student(
+        id = 2, 
+        name = "Ana", 
+        email = "ana@puce.com", 
+        grade = 10, 
+        isActive = true
+    )
+    val juan = Student(
+        id = 3, 
+        name = "Juan", 
+        email = "juan@puce.com", 
+        grade = 9, 
+        isActive = true
+    )
+	return listOf(jorge, ana, juan)
+}
+
+fun getResult(grade: Int): String {
+    return if(grade>7) "Aprobado" else "Reprobado"
+}
+
+fun main() {
+    for (student in getStudents()){
+        println("${student.name} está ${getResult(student.grade)}")
+    }
 }
