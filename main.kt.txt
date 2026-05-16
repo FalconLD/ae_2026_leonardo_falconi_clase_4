@@ -1,0 +1,15 @@
+//ae_2026:leonardo_falconi_clase_4 main.kt
+//estructura del commit clase_4 {{valor incremental}}
+fun main() {
+    //Siempre debo tipar mis variables (o constantes)
+    val mensaje: String = "Hola mundo"
+    var variableMutable: Int = 5
+    println(mensaje)
+    println(variableMutable)
+
+	variableMutable = 10
+    println(mensaje)
+    
+    mensaje = "Hola mundo mutado"
+    println(variableMutable)
+}
