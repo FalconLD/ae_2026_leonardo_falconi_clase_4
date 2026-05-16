@@ -1,13 +1,19 @@
 //ae_2026_leonardo_falconi_clase_4 main.kt
 //estructura del commit clase_4 {{valor incremental}}
 fun main() {
-    //Siempre debo tipar mis variables (o constantes)
-    val name: String = "Ana"
-    val email: String = "ana@gmail.com"
-    val number: Int = 67
-   	//Ana - ana@gmail.com
+	val grade: Int = 85
     
-    println(name + " - " + email)
-    println("$name - $email")
-    println("Te faltan ${100 - number} para llegar a 100")
+    if (grade > 70){
+        println("Aprobado")
+    } else {
+        println("Reprobado")
+    }
+	
+    val result: String = if (grade > 70){
+        "Aprobado"
+    } else {
+        "Reprobado"
+    }
+    
+    println(result)
 }
